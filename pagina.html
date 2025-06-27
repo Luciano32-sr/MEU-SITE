@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Página Simples</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #2e8b57;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    ul {
+      line-height: 2;
+    }
+
+    img {
+      border-radius: 10px;
+      width: 300px;
+      height: auto;
+    }
+
+    table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    th {
+      background-color: #d3e0ea;
+      color: #333;
+    }
+
+    table, th, td {
+      border: 1px solid #999;
+      padding: 10px;
+      text-align: center;
+    }
+
+    a {
+      color: #2e8b57;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #ff4500;
+    }
+
+    #mensagem {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #2e8b57;
+    }
+  </style>
+</head>
+<body>
+  <h1>Luciano</h1>
+
+  <p>Olá! Meu nome é Luciano, tenho 33 anos, moro em Toledo - PR e sou apaixonado por tecnologia, jogos e viagens pelo mundo.</p>
+
+  <!-- Botão e espaço para a mensagem -->
+  <button onclick="mostrarMensagem()">Clique para ver uma mensagem!</button>
+  <div id="mensagem"></div>
+
+  <ul>
+    <li>Jogar videogame</li>
+    <li>Programar</li>
+    <li>Viajar</li>
+  </ul>
+
+  <img src="xbox-playstation.jpg" alt="jogar">
+
+  <h2>Países que gostaria de visitar</h2>
+  <table>
+    <tr>
+      <th>País</th>
+      <th>Imagem</th>
+    </tr>
+    <tr>
+      <td>Japão</td>
+      <td><img src="japan.jpg" width="200" style="border-radius: 10px;"></td>
+    </tr>
+    <tr>
+      <td>Noruega</td>
+      <td><img src="Noruega.jpg" width="200" style="border-radius: 10px;"></td>
+    </tr>
+    <tr>
+      <td>Nova York</td>
+      <td><img src="nova york.jpg" width="200" style="border-radius: 10px;"></td>
+    </tr>
+  </table>
+
+  <p>Confira um dos meus sites favoritos: <a href="https://www.tecmundo.com.br" target="_blank">TecMundo</a></p>
+
+  <script>
+    function mostrarMensagem() {
+      const mensagens = [
+        "Você é capaz de conquistar grandes coisas!",
+        "Nunca desista dos seus sonhos.",
+        "Continue aprendendo e evoluindo todos os dias.",
+        "O segredo do sucesso está na persistência.",
+        "Grandes jornadas começam com um simples passo!"
+      ];
+      const aleatoria = mensagens[Math.floor(Math.random() * mensagens.length)];
+      document.getElementById("mensagem").innerText = aleatoria;
+    }
+  </script>
+</body>
+</html>
